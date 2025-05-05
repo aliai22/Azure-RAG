@@ -30,7 +30,10 @@ async def get_conversation(conversation_id: str):
     """Get conversation history"""
     try:
         history = rag_service.get_conversation_history(conversation_id)
-        return history
+        return {
+            "conversation_id": conversation_id,
+            "turns": history
+        }
     except Exception as e:
         raise HTTPException(status_code=404, detail=str(e))
 
