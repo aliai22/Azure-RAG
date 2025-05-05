@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from services.chat_service import RAGService
-from .schemas import (
+from app.services.chat_service import RAGService
+from app.api.schemas import (
     ChatRequest,
     ChatResponse,
     ConversationHistory,

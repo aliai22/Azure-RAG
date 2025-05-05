@@ -4,9 +4,8 @@ from azure.search.documents import SearchClient
 from azure.core.credentials import AzureKeyCredential 
 from openai import AzureOpenAI
 from collections import deque
-from datetime import datetime
 from typing import Optional
-from services.storage.cosmos_storage import CosmosDB
+from app.services.storage.cosmos_storage import CosmosDB
 
 from dotenv import load_dotenv
 load_dotenv()

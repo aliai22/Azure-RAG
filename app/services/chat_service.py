@@ -1,7 +1,7 @@
 from typing import Tuple, Optional
-from data_models.conversation import Conversation
-from services.storage.cosmos_storage import CosmosDB
-from services.chatbot.rag_chatbot import RAGChatbot
+from app.data_models.conversation import Conversation
+from app.services.storage.cosmos_storage import CosmosDB
+from app.services.chatbot.rag_chatbot import RAGChatbot
 
 class RAGService:
     def __init__(self):
