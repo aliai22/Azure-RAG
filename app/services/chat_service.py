@@ -22,10 +22,10 @@ class RAGService:
         
         return response, conversation_id
 
-    def get_conversation_history(self, conversation_id: str) -> dict:
+    def get_conversation_history(self, conversation_id: str) -> Conversation:
         """Get conversation history from Cosmos DB"""
-        return self.cosmos_service.get_conversation_history(conversation_id)
-
+        items =  self.cosmos_service.get_conversation_history(conversation_id)
+        return Conversation.from_cosmos_items(items)
     def start_new_conversation(self) -> str:
         """Start a new conversation"""
         new_id = self.cosmos_service.create_new_conversation()
