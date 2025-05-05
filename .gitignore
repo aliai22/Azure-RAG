@@ -1,8 +1,8 @@
 __pycache__/
 *.pyc
-.env
+.env/
 .vscode/
 *.log
 *.sqlite3
 .DS_Store
-.env*
+.env
